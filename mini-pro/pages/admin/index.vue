@@ -1,19 +1,22 @@
 <template>
     <div class="container admin-page">
         <section>
-            <button class="button--green">Create Post</button>
+            <nuxt-link to="/admin/new-post" class="button--green">Create Post</nuxt-link>
             <br>
             <br>
-            <PostList/>
+            <PostList :is-admin="true"/>
         </section>
     </div>
 </template>
 
 <script>
     import PostList from '@/components/Posts/PostList'
+    import NuxtLink from "../../.nuxt/components/nuxt-link";
 
     export default {
+        layout: 'admin',
         components: {
+            NuxtLink,
             PostList
         }
     }
