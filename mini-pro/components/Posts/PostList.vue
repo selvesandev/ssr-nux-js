@@ -1,20 +1,13 @@
 <template>
     <div class="post-list">
         <PostArchive
+                v-for="post in posts"
+                :key="post.id"
                 :is-admin="isAdmin"
-                id="2"
-                previewText="lorem ipsum dolor set amet"
-                title="Hello World"
-                thumbnail="image"/>
-        <br>
-        <hr>
-        <br>
-        <PostArchive
-                :is-admin="isAdmin"
-                id="4"
-                previewText="lorem ipsum dolor set amet info x y z"
-                title="Hello World continue.."
-                thumbnail="image and ok"/>
+                :id="post.id"
+                :previewText="post.previewText"
+                :title="post.title"
+                :thumbnail="post.thumbnail"/>
     </div>
 
 </template>
@@ -29,6 +22,10 @@
             isAdmin: {
                 type: Boolean,
                 default: false
+            },
+            posts: {
+                type: Array,
+                required: true
             }
         }
     }
