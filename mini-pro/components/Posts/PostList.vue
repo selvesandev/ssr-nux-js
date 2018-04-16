@@ -9,7 +9,6 @@
                 :title="post.title"
                 :thumbnail="post.thumbnail"/>
     </div>
-
 </template>
 <script>
     import PostArchive from '~/components/Posts/PostArchive.vue'

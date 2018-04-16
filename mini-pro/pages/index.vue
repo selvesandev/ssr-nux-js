@@ -18,13 +18,11 @@
 <script>
     import Logo from '~/components/Logo.vue'
     import NuxtLink from "../.nuxt/components/nuxt-link";
-    import PostList from '@/components/Posts/PostList';
 
     export default {
         components: {
             NuxtLink,
             Logo,
-            PostList
         },
         data() {
             return {}

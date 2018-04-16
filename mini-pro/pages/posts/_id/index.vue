@@ -21,6 +21,9 @@
     import axios from 'axios';
 
     export default {
+        head: {
+            title: 'A blog post'
+        },
         asyncData(context, callback) {
             return axios.get('https://nuxt-blog-e6337.firebaseio.com/' + context.params.id + '.json').then(response => {
                 return {

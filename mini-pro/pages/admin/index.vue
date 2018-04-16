@@ -10,14 +10,12 @@
 </template>
 
 <script>
-    import PostList from '@/components/Posts/PostList'
     import NuxtLink from "../../.nuxt/components/nuxt-link";
 
     export default {
         layout: 'admin',
         components: {
-            NuxtLink,
-            PostList
+            NuxtLink
         },
         computed: {
             posts() {
