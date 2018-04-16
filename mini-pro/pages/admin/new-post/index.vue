@@ -1,11 +1,12 @@
 <template>
     <div class="content">
-        <PostForm/>
+        <PostForm @submit="onSubmitted"/>
     </div>
 </template>
 
 <script>
     import PostForm from '@/components/Admin/PostForm';
+    import axios from 'axios';
 
     export default {
         layout: 'admin',
@@ -15,7 +16,13 @@
         data() {
             return {}
         },
-        methods: {}
+        methods: {
+            onSubmitted(postData) {
+                this.$store.dispatch('addPost', postData).then(() => {
+                    this.$router.push('/admin')
+                })
+            }
+        }
     }
 </script>
 

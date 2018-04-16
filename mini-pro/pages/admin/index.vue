@@ -4,7 +4,7 @@
             <nuxt-link to="/admin/new-post" class="button--green">Create Post</nuxt-link>
             <br>
             <br>
-            <PostList :is-admin="true"/>
+            <PostList :is-admin="true" :posts="posts"/>
         </section>
     </div>
 </template>
@@ -18,6 +18,11 @@
         components: {
             NuxtLink,
             PostList
+        },
+        computed: {
+            posts() {
+                return this.$store.getters.loadedPosts;
+            }
         }
     }
 </script>

@@ -3,7 +3,7 @@
         <h2>
             {{title}}
         </h2>
-        <img src="http://s3-us-west-2.amazonaws.com/cdn1.staticpixel.com/wp-content/uploads/2013/02/wayne_mah_430080036.jpg"
+        <img :src="thumbnail"
              alt="image">
         <p>
             {{previewText}}
